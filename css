@@ -1,0 +1,24 @@
+/* הוספת עיצוב נוסף לגלריה */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* תמנה 5 עמודות, כל עמודה ברוחב שווה */
+  gap: 10px; /* מרווח בין התמונות */
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+.portfolio-item img {
+  width: 100%; /* תמונה תתפש את רוחב העמודה */
+  height: auto; /* גובה יותאם לרוחב */
+  display: block;
+  transition: transform 0.3s;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1); /* תמונה תתקרב כאשר עוברים מעליה */
+}
